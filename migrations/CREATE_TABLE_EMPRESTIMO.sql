@@ -1,3 +1,5 @@
+USE Biblioteca;
+
 CREATE TABLE EMPRESTIMO (
     ID_Emprestimo INT PRIMARY KEY AUTO_INCREMENT,
     ID_Cliente INT,
