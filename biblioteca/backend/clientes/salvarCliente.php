@@ -16,7 +16,7 @@ try {
 
     $stmt->execute();
 
-    echo "Cliente cadastrado com sucesso!";
+    echo "<META HTTP-EQUIV=REFRESH CONTENT='0; URL=inicio.php>";
 } catch (PDOException $e) {
     echo "Erro ao cadastrar cliente: " . $e->getMessage();
 }

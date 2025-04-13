@@ -87,3 +87,15 @@ body {
     height: 30px;
     outline: none;
 }
+
+.placeholder {
+    border-radius: 10px;
+    height: 70vh;
+    background-color: var(--branco-20);
+}
+
+.placeholder img {
+    object-fit: contain;
+    width: 50%;
+    height: 100%;
+}

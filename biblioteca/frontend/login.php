@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Home - Biblioteca</title>
+  <title>Login</title>
   <?php include 'templates/header.php'; ?>
   <link href="assets/css/login.css" rel="stylesheet">
 </head>
