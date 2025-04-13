@@ -1,5 +1,5 @@
 <?php
-require 'config.php';
+require '../conexao.php';
 
 try {
     $nome = $_POST['nome'];
