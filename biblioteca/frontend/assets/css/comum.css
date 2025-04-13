@@ -1,0 +1,89 @@
+:root {
+    --azul: #155e63;
+    --azul-30: #0e8d9665;
+    --branco-10: #eae7e7;
+    --branco-20: #f9f8eb;
+    --cinza: #d2cccc;
+    --azul-10: #1e868d;
+}
+
+/*configurações*/
+body {
+    caret-color: var(--azul-10);
+}
+
+::selection {
+    background-color: var(--azul-30);
+}
+
+/*Cores de Fundo*/
+.bg-azul {
+    background-color: var(--azul);
+}
+
+.bg-branco-10 {
+    background-color: var(--branco-10);
+}
+
+.bg-branco-20 {
+    background-color: var(--branco-20);
+}
+
+.bg-cinza {
+    background-color: var(--cinza);
+}
+
+.bg-azul-10 {
+    background-color: var(--azul-10);
+}
+
+/*Cores de Texto*/
+.text-azul {
+    color: var(--azul);
+}
+
+.text-branco-10 {
+    color: var(--branco-10);
+}
+
+.text-branco-20 {
+    color: var(--branco-20);
+}
+
+.text-cinza {
+    color: var(--cinza);
+}
+
+.text-azul-10 {
+    color: var(--azul-10);
+}
+
+/*posicionamento*/
+.full-height {
+    height: 100%;
+}
+
+/*componentes*/
+.btn-padrao {
+    background-color: var(--azul-10);
+    color: var(--branco-20);
+    height: 40px;
+    text-align: center;
+    transition-duration: 250ms;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-padrao:hover {
+    background-color: var(--azul);
+}
+
+.input-texto {
+    background-color: var(--branco-10);
+    border-radius: 5px;
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 30px;
+    outline: none;
+}
