@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse px-2 text-light" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-light" aria-current="page" href="emprestimos.php">Emprestar</a>
+                    <a class="nav-link text-light" aria-current="page" href="../backend/emprestimo/verificaEmprestimos.php">Emprestar</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="cadastroLivro.php">Cadastrar Livros</a>

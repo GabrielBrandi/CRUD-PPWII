@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Emprestimos</title>
+    <title>Livros</title>
     <?php include 'templates/header.php'; ?>
 </head>
 
@@ -27,8 +27,8 @@
                             <input type="text" class="input-texto w-100" name="genero" required>
                         </div>
                         <div class="mb-4">
-                            <label for="totalPaginas" class="d-block">Total de Páginas</label>
-                            <input type="number" class="input-texto w-100" name="totalPaginas" required>
+                            <label for="paginas" class="d-block">Total de Páginas</label>
+                            <input type="number" class="input-texto w-100" name="paginas" required>
                         </div>
                         <input type="submit" value="Cadastrar" class="btn-padrao w-100">
                     </form>

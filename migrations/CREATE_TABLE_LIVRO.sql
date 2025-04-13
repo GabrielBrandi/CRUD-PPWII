@@ -3,6 +3,6 @@ USE Biblioteca;
 CREATE TABLE LIVRO (
     ID_Livro INT PRIMARY KEY AUTO_INCREMENT,
     Nome VARCHAR(150) NOT NULL,
-    Descricao TEXT,
+    Paginas INT,
     Genero VARCHAR(50)
 );
