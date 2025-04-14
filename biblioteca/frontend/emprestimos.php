@@ -37,12 +37,12 @@
                             echo '<td>' . $emprestimo['Data_Emprestimo'] . '</td>';
                             echo '<td>' . $emprestimo['Data_Devolucao'] . '</td>';
                             echo '  <td>' .
-                                "<a href=\"\" class=\"text-decoration-none\">
+                                "<a href=\"editarEmprestimo.php?id_emprestimo={$emprestimo['ID_Emprestimo']}\" class=\"text-decoration-none\">
                                                 <img src=\"assets/img/editar.svg\" class=\"btn btn-primary d-inline-block p-1\">
                                             </a> 
-                                            <a href=\"\" class=\"text-decoration-none\">
+                                            <a href=\"../backend/emprestimo/excluirEmprestimo.php?id_emprestimo={$emprestimo['ID_Emprestimo']}\" class=\"text-decoration-none\" onclick=\"return confirm('Tem certeza que deseja excluir este empréstimo?');\">
                                                 <img src=\"assets/img/excluir.svg\" class=\"btn btn-danger d-inline-block p-1\">
-                                            </a>" .
+                                             </a>" . 
                                 '</td>';
                             echo '<tr>';
                         }

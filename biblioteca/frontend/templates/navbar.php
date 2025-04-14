@@ -10,13 +10,13 @@
         <div class="collapse navbar-collapse px-2 text-light" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-light text-link" href="emprestimos.php">Empréstimos</a>
+                    <a class="nav-link text-light text-link" href="../backend/emprestimo/verificaEmprestimos.php">Empréstimos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light text-link" aria-current="page" href="../backend/emprestimo/verificaEmprestimos.php">Cadastrar Empréstimos</a>
+                    <a class="nav-link text-light text-link" aria-current="page" href="emprestarLivro.php">Cadastrar Empréstimos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light text-link" href="livros.php">Livros</a>
+                    <a class="nav-link text-light text-link" href="../backend/livros/verificaLivros.php">Livros</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light text-link" href="cadastroLivro.php">Cadastrar Livros</a>

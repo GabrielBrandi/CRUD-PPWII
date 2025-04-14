@@ -41,10 +41,10 @@
                             echo '<td>' . $livro['Paginas'] . '</td>';
                             echo '<td>' . $livro['Emprestado'] . '</td>';
                             echo '  <td>' .
-                                "<a href=\"\" class=\"text-decoration-none\">
+                                "<a href=\"editarLivro.php?id_livro={$livro['ID_Livro']}\" class=\"text-decoration-none\">
                                                 <img src=\"assets/img/editar.svg\" class=\"btn btn-primary d-inline-block p-1\">
                                             </a> 
-                                            <a href=\"\" class=\"text-decoration-none\">
+                                            <a href=\"../backend/livros/excluirLivro.php?id_livro={$livro['ID_Livro']}\" class=\"text-decoration-none\" onclick=\"return confirm('Tem certeza que deseja excluir este livro?');\">
                                                 <img src=\"assets/img/excluir.svg\" class=\"btn btn-danger d-inline-block p-1\">
                                             </a>" .
                                 '</td>';
