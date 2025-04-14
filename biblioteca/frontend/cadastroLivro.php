@@ -27,6 +27,10 @@
                             <input type="text" class="input-texto w-100" name="genero" required>
                         </div>
                         <div class="mb-4">
+                            <label for="sinopse" class="d-block">Sinopse</label>
+                            <input type="text" class="input-texto w-100" name="sinopse" required>
+                        </div>
+                        <div class="mb-4">
                             <label for="paginas" class="d-block">Total de Páginas</label>
                             <input type="number" class="input-texto w-100" name="paginas" required>
                         </div>

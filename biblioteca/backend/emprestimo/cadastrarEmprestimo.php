@@ -1,23 +1,20 @@
 <?php
-require_once '../conexao.php';
-
-$idCliente = $_POST['id_cliente'];
-$idLivro = $_POST['id_livro'];
-$dataEmprestimo = $_POST['data_emprestimo'];
-$dataDevolucao = $_POST['data_devolucao'];
+require '../conexao.php';
 
 try {
-    $sql = "INSERT INTO emprestimo (id_cliente, id_livro, data_emprestimo, data_devolucao)
-            VALUES (:id_cliente, :id_livro, :data_emprestimo, :data_devolucao)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':id_cliente', $idCliente);
-    $stmt->bindParam(':id_livro', $idLivro);
-    $stmt->bindParam(':data_emprestimo', $dataEmprestimo);
-    $stmt->bindParam(':data_devolucao', $dataDevolucao);
-    $stmt->execute();
+    $idLivro = addslashes($_POST['id_livro']);
+    $data_Emprestimo = addslashes($_POST['data_emprestimo']);
+    $data_Devolucao = addslashes($_POST['data_devolucao']);    
 
-    echo "Empréstimo cadastrado com sucesso!";
+    $sql = "INSERT INTO emprestimo SET idLivro = '$idLivro', data_emprestimo = '$data_emprestimo', data_devolucao = '$data_devolucao' ";
+
+    echo "
+        <META HTTP-EQUIV=REFRESH CONTENT='0; URL=home.php'>
+            <script type=\"text/javascript\">
+                alert(\"Emprestimo cadastrado com sucesso! \");
+            </script>
+        ";
 } catch (PDOException $e) {
-    echo "Erro ao cadastrar empréstimo: " . $e->getMessage();
+    echo "Erro ao emprestar livro: " . $e->getMessage();
 }
 ?>

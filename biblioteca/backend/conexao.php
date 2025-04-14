@@ -1,14 +1,12 @@
 <?php
-$host = 'localhost:8080';
-$dbname = 'biblioteca';
-$user = 'root';
-$pass = '';
+$dsn = "mysql:dbname=biblioteca";
+$dbuser = "root";
+$dbpass = "";
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO($dsn, $dbuser, $dbpass);
 } catch (PDOException $e) {
-    echo "Erro de conexão: " . $e->getMessage();
+    echo "Falha ao conectar a base de dados: " . $e->getMessage();
     exit();
 }
 ?>

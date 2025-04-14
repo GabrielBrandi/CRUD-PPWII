@@ -1,20 +1,22 @@
 <?php
-require_once '../conexao.php';
-
-$nome = $_POST['nome'];
-$paginas = $_POST['paginas'];
-$genero = $_POST['genero'];
+require '../conexao.php';
 
 try {
-    $sql = "INSERT INTO livro (nome, paginas, genero) 
-            VALUES (:nome, :paginas, :genero)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':nome', $nome);
-    $stmt->bindParam(':paginas', $paginas);
-    $stmt->bindParam(':genero', $genero);
-    $stmt->execute();
+    if (isset($_POST['nome']) && empty($_POST['nome']) == false) {
+        $nome = addslashes($_POST['nome']);
+        $paginas = addslashes($_POST['paginas']);
+        $genero = addslashes($_POST['genero']);
+        $sinopse = addslashes($_POST['sinopse']);
 
-    echo "Livro cadastrado com sucesso!";
+        $sql = "INSERT INTO personagem SET nome = '$nome', paginas = '$paginas', genero = '$genero', sinopse = '$sinopse' ";
+
+        echo "
+        <META HTTP-EQUIV=REFRESH CONTENT='0; URL=home.php'>
+            <script type=\"text/javascript\">
+                alert(\"Livro cadastrado com sucesso! \");
+            </script>
+        ";
+    }
 } catch (PDOException $e) {
     echo "Erro ao cadastrar livro: " . $e->getMessage();
 }
