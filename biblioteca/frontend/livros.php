@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Emprestar Livro</title>
+    <title>Livros Cadastrados</title>
     <?php include 'templates/header.php'; ?>
     <?php require '../backend/conexao.php' ?>
 </head>
@@ -14,28 +14,32 @@
     </header>
     <main class="pt-5">
         <div class="container">
-            <h2 class="text-center text-azul">Livros Emprestados</h2>
+            <h2 class="text-center text-azul">Livros Cadastrados</h2>
             <table class="table table-striped">
                 <thead class="bg-azul-10 text-branco-10">
                     <tr>
                         <th>Cód.</th>
-                        <th>Livro</th>
-                        <th>Dt. Devolução</th>
-                        <th>Dt. Empréstimo</th>
+                        <th>Nome</th>
+                        <th>Sinopse</th>
+                        <th>Gênero</th>
+                        <th>Páginas</th>
+                        <th>Emprestado</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    $sql = "select e.*, l.nome from emprestimo e join livro l on e.ID_Livro = l.ID_Livro";
+                    $sql = "select * from livro";
                     $sql = $pdo->query($sql);
                     if ($sql->rowCount() > 0) {
-                        foreach ($sql->fetchall() as $emprestimo) {
+                        foreach ($sql->fetchall() as $livro) {
                             echo '<tr>';
-                            echo '<td>' . $emprestimo['ID_Emprestimo'] . '</td>';
-                            echo '<td>' . $emprestimo['nome'] . '</td>';
-                            echo '<td>' . $emprestimo['Data_Emprestimo'] . '</td>';
-                            echo '<td>' . $emprestimo['Data_Devolucao'] . '</td>';
+                            echo '<td>' . $livro['ID_Livro'] . '</td>';
+                            echo '<td>' . $livro['Nome'] . '</td>';
+                            echo '<td>' . $livro['Sinopse'] . '</td>';
+                            echo '<td>' . $livro['Genero'] . '</td>';
+                            echo '<td>' . $livro['Paginas'] . '</td>';
+                            echo '<td>' . $livro['Emprestado'] . '</td>';
                             echo '  <td>' .
                                 "<a href=\"\" class=\"text-decoration-none\">
                                                 <img src=\"assets/img/editar.svg\" class=\"btn btn-primary d-inline-block p-1\">
