@@ -35,7 +35,14 @@
                             echo '<td>' . $emprestimo['nome'] . '</td>';
                             echo '<td>' . $emprestimo['Data_Emprestimo'] . '</td>';
                             echo '<td>' . $emprestimo['Data_Devolucao'] . '</td>';
-                            echo '<td>' . "Editar - Excluir" . '</td>';
+                            echo '  <td>' .
+                                "<a href=\"\" class=\"text-decoration-none\">
+                                                <img src=\"assets/img/editar.svg\" class=\"btn btn-primary d-inline-block p-1\">
+                                            </a> 
+                                            <a href=\"\" class=\"text-decoration-none\">
+                                                <img src=\"assets/img/excluir.svg\" class=\"btn btn-danger d-inline-block p-1\">
+                                            </a>" .
+                                '</td>';
                             echo '<tr>';
                         }
                     }
