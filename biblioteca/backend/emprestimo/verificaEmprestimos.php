@@ -6,7 +6,7 @@ try {
     $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($resultado && $resultado['total'] > 0) {
-        header("Location: ../../frontend/cadastroEmprestimo.php");
+        header("Location: ../../frontend/emprestarLivro.php");
         exit;
     } else {
         header("Location: ../../frontend/emprestimosPlaceholder.php");
