@@ -23,18 +23,6 @@
                     </a>
                 </div>
             </div>
-            <table class="table table-striped" hidden>
-                <thead class="bg-azul-10 text-branco-10">
-                    <tr>
-                        <th>Cód.</th>
-                        <th>Livro</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </main>
     <footer>
